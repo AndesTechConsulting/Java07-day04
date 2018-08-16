@@ -23,4 +23,9 @@ public abstract class Figure2D {
     public void setRho(double rho) {
         this.rho = rho;
     }
+
+    protected double getSP(){
+
+        return square()/perimeter();
+    }
 }
