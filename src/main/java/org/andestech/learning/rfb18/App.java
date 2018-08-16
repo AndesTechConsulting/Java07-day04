@@ -11,8 +11,19 @@ public class App
         return f2d.square()*f2d.getRho();
     }
 
+    public static Double calcMass2(Object f2d)
+    {
+        if( f2d instanceof Figure2D  ){
+
+        return ((Figure2D)f2d).square()*
+                ((Figure2D)f2d).getRho();}
+        return null;
+    }
+
     public static void main( String[] args )
     {
+
+
         // test аргументов cmd
         int N = args.length;
         double r=1, a=1, b=1;
@@ -38,6 +49,14 @@ public class App
         System.out.println(c1.getSP());
         Rectangle r1 = new Rectangle(a,b);
         System.out.println(r1.getSP());
+
+        //-------------
+
+        calcMass(c1);
+
+        Object o1 = c1;
+       // System.out.println(o1.getSP());
+
 
     }
 }
